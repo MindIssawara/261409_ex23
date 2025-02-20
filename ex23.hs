@@ -1,6 +1,6 @@
 import System.Random
 -- can you reuse code from the previous version?
---  Yes, I reused randNum, verdict', inRange, getRange and readGuess from Aj. Chin's version. I modified readNumber runGameRg and v4.
+--  Yes, I reused randNum, verdict', inRange, getRange and readGuess from Aj. Chin's version. I modified readNumber runGameRg and v5(from V4).
 
 -- try to separate your code into pure and impure parts
 -- pure parts
@@ -98,8 +98,8 @@ runGameRg num range count cont guesses = do
                 putStrLn "Game over"
                 putStrLn $ "Numbers guessed: " ++ concatMap (++ ", ") (map show (guess : guesses))
 
-v4 :: IO ()
-v4 = do
+v5 :: IO ()
+v5 = do
     g <- newStdGen
     range <- getRange
     lim <- readNumber "Guess limit"
